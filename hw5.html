@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="con">
+        <div class="form">
+            <div class="table"><br>
+                <tr>
+                    <td>enter the limit</td>
+                    <td><input type="number" name="" id="limit"></td>
+                </tr><br><br>
+                <tr>
+                    <td></td>
+                    <td><button onclick="compute()" >enter</button></td>
+                </tr><br>
+                <tr>
+                    <td></td>
+                    <td><p id="result"></p></td>
+                </tr>
+            </div>
+        </div>
+    </div>
+    <script>
+        var output="";
+        //var status;
+        function compute()
+        {
+            if(limit.value=="")
+            {
+                document.getElementById("result").innerHTML="enter the limit in the field";   
+            }
+            else
+            {
+                for(var i=1;i<=limit.value;i++)
+                {
+                    if(i%2==0)
+                    {
+                        var status="even";
+                    }
+                    else
+                    {
+                        var status="odd";
+                    }
+                    output+="<li>"+i+status+"</li>";
+                }
+                document.getElementById("result").innerHTML=output;
+            }
+        }
+    </script>
+</body>
+</html>

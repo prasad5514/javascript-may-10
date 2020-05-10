@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>javascript program to find the sum of square of the 
+        elements of an array</h3>
+    <div class="con">
+        <form action="">
+            <div class="table">
+                <tr>
+                    <td>enter first element of the array</td>
+                    <td><input type="number" id="arr1"></td>
+                </tr><br><br>
+                <tr>
+                    <td>enter the second element of the array</td>
+                    <td><input type="number" name="" id="arr2"></td>
+                </tr><br><br>
+                <tr>
+                    <td>enter the third element of the array</td>
+                    <td><input type="number" name="" id="arr3"></td>
+                </tr><br><br>
+                <tr>
+                    <td></td>
+                    <td><button type="button" onclick="store()">enter</button></td>
+                </tr><br><br>
+                <tr>
+                    <td></td>
+                    <td><p id="result1"></p></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><p id="result2"></p></td>
+                </tr>
+            </div>
+        </form>
+    </div>
+    <script>
+        function store()
+        {
+            if(arr1.value==""||arr2.value==""||arr3.value=="")
+            {
+                document.getElementById("result1").innerHTML="all fields need to fill";
+                return false;
+            }
+            else
+            {
+                var arr=[arr1.value,arr2.value,arr3.value];
+            document.getElementById("result1").innerHTML="array elements are "+arr;
+            var sum=(((arr1.value)*(arr1.value))+((arr2.value)*(arr2.value))+((arr3.value)*(arr3.value)));
+            document.getElementById("result2").innerHTML="sum is "+sum;
+            }
+        }        
+    </script>
+</body>
+</html>

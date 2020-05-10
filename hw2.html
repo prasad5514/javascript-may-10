@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>javascript program to find the most frequent item of an array</h3>
+    <div class="con">
+       <form action="">
+        <div class="table">
+            
+            <tr>
+                <td></td>
+                <td><button type="button" onclick="check()">enter</button></td>
+            </tr><br><br>
+            <tr>
+                <td></td>
+                <td><p id="result1"></p></td>
+            </tr>
+            
+        </div>
+       </form>
+    </div>
+    <script>
+        function check()
+        {
+            var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+//var arr1=["s","a","v","e","c","h","a","n","g","e","i","n","t","h","e","e","d","i","t","e","r"];
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+        for (var j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+}
+//console.log(item+" ( " +mf +" times ) ") ;
+//console.log(mf);
+document.getElementById("result1").innerHTML=item+" ( " +mf +" times ) ";
+        }
+</script>
+</body>
+</html>

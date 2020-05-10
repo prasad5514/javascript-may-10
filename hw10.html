@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>write a java script program to construct the folowing 
+        pattern using nested for loop</h3>
+    <div class="con">
+       <form action="">
+        <div class="table">
+            
+            <tr>
+                <td></td>
+                <td><button type="button" onclick="check()">enter</button></td>
+            </tr><br><br>
+            <tr>
+                <td></td>
+                <td><p id="result1"></p></td>
+            </tr>
+            
+        </div>
+       </form>
+    </div>
+    <script>
+        function check()
+        {
+            var i,j;
+ for(i=1; i <= 5; i++)
+ {
+  for(j=1; j<=i; j++)
+ {
+   
+   document.write('*');
+   //document.getElementById("result1").innerHTML='*';
+  }
+   document.write('<br/>');
+   //document.getElementById("result1").innerHTML='<br/>';
+  }
+//
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>write a javascript function to truncate a string if 
+        it is longer than the specified number of charater</h3>
+        <h5>if the string size is greater than 4 it will be divided</h5>
+    <div class="con">
+        <div class="form">
+            <div class="table">
+                <tr>
+                    <td>enter your string</td>
+                    <td><input type="text" name="" id="stringg"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="button" class="btn btn-success" onclick="cutstring()">check</button> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><p id="result1"></p></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><p id="result2"></p></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><p id="result3"></p></td>
+                </tr>
+            </div>
+        </div>
+    </div>
+    <script>
+         var sr=document.getElementById("stringg")
+        function cutstring()
+        {
+            document.getElementById("result1").innerHTML=sr.value;
+            const prop=sr.value;
+            var x=prop.length;
+            document.getElementById("result2").innerHTML=x+" is the size";
+            if(x>4)
+            {
+                document.getElementById("result3").innerHTML=(prop.substring(0,4))+" it was bigger than specified size";
+
+            }
+            else
+            {
+                document.getElementById("result3").innerHTML=sr.value+" normal size"; 
+            }
+
+
+            
+        }
+    </script>
+    
+</body>
+</html>
