@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>write a javascript program to print the word "javascript"
+        as below in each line using for loop,j ja jav java    javascript</h3>
+    <div class="con">
+        <div class="form">
+            <div class="table">
+                <tr>
+                    <td>enter your string</td>
+                    <td><input type="text" name="" id="stringg"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="button" class="btn btn-success" onclick="aababc()">check</button> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><p id="result1"></p></td>
+                </tr>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        var text="";
+         var sr=document.getElementById("stringg")
+         //var arr[]=sr;
+         //var arr=sr;
+         var arr=["j","ja","jav","java"]
+        function aababc()
+        {
+            
+            for(i=0;i<arr.length;i++)
+            {
+                
+                text+=arr[i]+"<br>";
+            }
+
+            document.getElementById("result1").innerHTML=text; 
+        }
+    </script>
+    
+</body>
+</html>
