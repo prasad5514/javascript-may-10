@@ -7,7 +7,7 @@
 </head>
 <body>
     <h3>write a javascript program to print the word "javascript"
-        as below in each line using for loop,j ja jav java    javascript</h3>
+        as below in each line using for loop,j   ja   jav   java    javascript</h3>
         <div class="con">
             <form action="">
              <div class="table">
@@ -17,7 +17,7 @@
                  </tr><br><br>
                  <tr>
                      <td></td>
-                     <td><p id="result1"></p></td>
+                     <td><p class="outputcss" id="output"></p></td>
                  </tr>
              </div>
             </form>
@@ -25,30 +25,22 @@
         <script>
             function onebyone()
             {
-                var txt = 'JavaScript';
+                var txt = 'JAVASCRIPT';
                 var x;
-                var result = "";
+                var result ="";
 
                 for (x of txt)
                {
-               result +=x ; 
-               document.write(result + "<br >");
-               console.log (result);
-               alert(result);
-               } 
+               result+=x; 
+               
+               document.write(result+"<br>");
+               
+               //document.getElementById("output").innerHTML=result2;//not working if dom
 
+               //console.log (result);
+               //alert(result);
+               } 
             }
-            //  function order()
-            //  {
-            //     var fruits = ["banana", "apple", "pineapple", "mango","orange"];
-                   
-            //        var sorted;
-            //        sorted=fruits.sort();
-                   
-            //        document.getElementById("result1").innerHTML="with out order "+fruits;
-            //        document.getElementById("result2").innerHTML="alphabetical order"+"\n"+sorted;
-            //  }
-             
         </script>
      </body>
      </html>
