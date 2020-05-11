@@ -8,43 +8,47 @@
 <body>
     <h3>write a javascript program to print the word "javascript"
         as below in each line using for loop,j ja jav java    javascript</h3>
-    <div class="con">
-        <div class="form">
-            <div class="table">
-                <tr>
-                    <td>enter your string</td>
-                    <td><input type="text" name="" id="stringg"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><button type="button" class="btn btn-success" onclick="aababc()">check</button> </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><p id="result1"></p></td>
-                </tr>
-                
-            </div>
-        </div>
-    </div>
-    <script>
-        var text="";
-         var sr=document.getElementById("stringg")
-         //var arr[]=sr;
-         //var arr=sr;
-         var arr=["j","ja","jav","java"]
-        function aababc()
-        {
-            
-            for(i=0;i<arr.length;i++)
+        <div class="con">
+            <form action="">
+             <div class="table">
+                 <tr>
+                     <td></td>
+                     <td><button type="button" onclick="onebyone()">enter</button></td>
+                 </tr><br><br>
+                 <tr>
+                     <td></td>
+                     <td><p id="result1"></p></td>
+                 </tr>
+             </div>
+            </form>
+         </div>
+        <script>
+            function onebyone()
             {
-                
-                text+=arr[i]+"<br>";
-            }
+                var txt = 'JavaScript';
+                var x;
+                var result = "";
 
-            document.getElementById("result1").innerHTML=text; 
-        }
-    </script>
-    
-</body>
-</html>
+                for (x of txt)
+               {
+               result +=x ; 
+               document.write(result + "<br >");
+               console.log (result);
+               alert(result);
+               } 
+
+            }
+            //  function order()
+            //  {
+            //     var fruits = ["banana", "apple", "pineapple", "mango","orange"];
+                   
+            //        var sorted;
+            //        sorted=fruits.sort();
+                   
+            //        document.getElementById("result1").innerHTML="with out order "+fruits;
+            //        document.getElementById("result2").innerHTML="alphabetical order"+"\n"+sorted;
+            //  }
+             
+        </script>
+     </body>
+     </html>
