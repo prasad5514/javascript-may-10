@@ -6,13 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>write a javascript program using for.. in to read the object from an array
+    <h3>write a javascript program using for...in to read the object from an array
         entered by user and to arrange it in alphabetical order</h3>
         <div class="con">
             <form action="">
              <div class="table">
-                 
-                 
                  <tr>
                      <td></td>
                      <td><button type="button" onclick="order()">enter</button></td>
@@ -25,22 +23,27 @@
                      <td></td>
                      <td><p id="result2"></p></td>
                  </tr>
-                 
-             </div>
+            </div>
             </form>
          </div>
         <script>
              function order()
-             {
-                var fruits = ["banana", "apple", "pineapple", "mango","orange"];
-                   
-                   var sorted;
-                   sorted=fruits.sort();
-                   
-                   document.getElementById("result1").innerHTML="with out order "+fruits;
-                   document.getElementById("result2").innerHTML="alphabetical order"+"\n"+sorted;
-             }
-             
+            {
+                var fruits = ["banana","apple","pineapple","mango","orange"]; 
+                var sorted;
+                var text="";
+                //var unit;//declaration not mandatory i think
+                for (unit in fruits)
+                    {
+                    text+=fruits[unit]+" ";
+                    //text+=person[name];//this "" required
+                    } 
+                    document.getElementById("result1").innerHTML="With out order"+" "+text+"<br>";
+                    //document.write("With out order"+" "+text+"<br>");
+                    sorted=fruits.sort();
+                    document.getElementById("result2").innerHTML="Alphabetical order"+" "+sorted;
+                    //document.write("Alphabetical order"+" "+sorted); 
+            }
         </script>
      </body>
      </html>
