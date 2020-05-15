@@ -8,6 +8,7 @@
 <body>
     <h3>javascript function to get an array and to read the first 
         element of an array check wheather it is prime or not</h3>
+        <hr color="Green"> 
     <div class="con">
        <form action="">
         <div class="table">
@@ -25,7 +26,7 @@
             </tr><br><br>
             <tr>
                 <td></td>
-                <td><button type="button" onclick="store()">enter</button></td>
+                <td><button type="button" onclick="prime()">enter</button></td>
             </tr><br><br>
             <tr>
                 <td></td>
@@ -43,7 +44,7 @@
        </form>
     </div>
     <script>
-        function store()
+        function prime()
         {
             if(arr1.value==""||arr2.value==""||arr3.value=="")
             {
@@ -56,38 +57,32 @@
                 document.getElementById("result1").innerHTML="array elements are "+arr;
                 var test=arr[0];
                 document.getElementById("result2").innerHTML="first array element is "+test;
-        
-            
-                if(test==1)
-            {
-                document.getElementById("result3").innerHTML="Neither prime nor composite";
-            }
-            else if(test==2)
-            {
-                document.getElementById("result3").innerHTML="prime";
-            }
-            else
-            {
-                    for(var x=2;x<test;x++)
-                    {
-                            if(test % x == 0)
-                            {
-                                // return false;
-                                document.getElementById("result3").innerHTML="Not prime";
-                                return false;
-                            }
-                            else
-                            {
-                                document.getElementById("result3").innerHTML="prime";
-                                return true;
-                            }
-                            
-                        
-                    }
                 
+                if(test==1||test==0)
+                {
+                    document.getElementById("result3").innerHTML=test+" is neither prime nor composite";
+                }
+                else
+                {
+                   var temp=1;
+                   for(x=2;x<=test/2;x++)
+                    {
+                      if(test%x==0)
+                      {
+                        temp=0;
+                      }
+                    }
+                    if(temp==0)
+                    {
+                        document.getElementById("result3").innerHTML=test+" is not prime";
+                    }
+                    else
+                    {       
+                        document.getElementById("result3").innerHTML=test+" is prime";
+                    }
                 }
             }
         }
-</script>
+    </script>
 </body>
 </html>
